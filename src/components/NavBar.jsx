@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
-import {Link} from 'react-scroll'
+import { Link } from 'react-scroll'
+import { motion } from "framer-motion"
 
 const NavBar = () => {
     const [nav, setNav] = useState(false);
@@ -30,7 +31,13 @@ const NavBar = () => {
     return (
         <div className='flex justify-between items-center w-full h-20 text-white bg-black fixed px-4'>
             <div>
-                <h1 className='text-3xl font-logo ml-4 mt-2'>Mikias</h1>
+                <motion.h1 className='text-xl font-logo ml-4 mt-2 hover:cursor-pointer'
+                     whileTap={{ scale: 0.2 }}   
+                animate={{ y: [0,10,0] }} // Adjust the values as needed
+  transition={{
+    duration: 4,
+    repeat: Infinity,
+  }}>Mikias</motion.h1>
             </div>
             <ul className='hidden md:flex'>
 

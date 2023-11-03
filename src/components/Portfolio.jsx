@@ -1,97 +1,90 @@
 import React from 'react'
 // import second from 'first'
-import Campsite from '../assets/portfolio/Campsite.png'
-import CourseGoal from '../assets/portfolio/CourseGoal.png'
-import Ecommerce from '../assets/portfolio/Ecommerce.png'
-import Expenses from '../assets/portfolio/Expenses.png'
-import Food from '../assets/portfolio/Food.png'
-import Hospital from '../assets/portfolio/Hospital.png'
-import IctPark from '../assets/portfolio/IctPark.png'
-import MeetUp from '../assets/portfolio/MeetUp.png'
-import Qoutes from '../assets/portfolio/Qoutes.png'
-import Monster from '../assets/portfolio/Monster.png'
-import Coach from '../assets/portfolio/coachApp.png'
-import Shoe from '../assets/portfolio/Shoe.png'
+import TmhirtBete from '../assets/portfolio/TmhirtBete.png'
+import FoodApp from '../assets/portfolio/FoodApp.png'
+import Inventory from '../assets/portfolio/Inventory.jpg'
+import SmartWaste from '../assets/portfolio/SmartWaste.png'
+import LMS from '../assets/portfolio/LMS.png'
+import TweeterClone from '../assets/portfolio/TweeterClone.png'
+
+import { motion, useAnimation } from "framer-motion";
+import { useEffect, useState } from 'react';
+
 
 const Portfolio = () => {
+   const controls = useAnimation();
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= window.innerHeight * 1.2) {
+        setInView(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({
+        y: 0,
+        opacity: 1,
+      });
+    }
+  }, [inView, controls]);
 
    const portfolios = [
     {
-      id:11,
-      src: Coach,
-      demo: 'https://coachapp.netlify.app',
-      code: 'https://github.com/DagimAsnake/vueCli-coachApp'
-    },
-    {
-      id:5,
-      src: Food,
-      demo: 'https://refoodorder.netlify.app/',
-      code: 'https://github.com/DagimAsnake/react-foodOrder'
-    },
-    {
-      id:10,
-      src: Monster,
-      demo: 'https://dagimasnake.github.io/vue-monsterGame/',
-      code: 'https://github.com/DagimAsnake/vue-monsterGame'
-    },
-    {
-      id:12,
-      src: Shoe,
-      demo: 'https://next-shoe-comp.vercel.app/',
-      code: 'https://github.com/DagimAsnake/next-ShoeComp'
-    },
-    {
-      id:3,
-      src: Ecommerce,
-      demo: 'https://ecommerce-b2hy.onrender.com',
-      code: 'https://github.com/DagimAsnake/Ecommerce'
-    },
-    {
       id:1,
-      src: Campsite,
-      demo: 'https://campsite-lczl.onrender.com',
-      code: 'https://github.com/DagimAsnake/yelpcamp'
+       src: TmhirtBete,
+      title:'Timhirt Bete App',
+      demo: 'https://t.me/temhrtbete',
+      code: ''
     },
     {
       id:2,
-      src: CourseGoal,
-      demo: 'https://coursegoall.netlify.app/',
-      code: 'https://github.com/DagimAsnake/CourseGoal'
+      src: FoodApp,
+      title:'Food Delivery App',
+      demo: '#',
+      code: 'https://github.com/Mikias-Miessa/Tikus-app'
+    },
+    {
+      id:3,
+      src: SmartWaste,
+      title:'Smart Waste Mangement System Using MQTT',
+      demo: '#',
+      code: 'https://github.com/Mikias-Miessa/Smart-bin-front-and-back-end'
     },
     {
       id:4,
-      src: Expenses,
-      demo: 'https://reaexpense.netlify.app/',
-      code: 'https://github.com/DagimAsnake/react-expenses'
+      src: Inventory,
+      title:'QR Code Based Inventory Management System',
+      demo: 'https://mikiasmiessa.000webhostapp.com/inventory/Products.php',
+      code: 'https://github.com/Mikias-Miessa/QRcode-based-inventory-management-system'
+    },
+    {
+      id:5,
+      src: TweeterClone,
+      title:'Social Media',
+      demo: '#',
+      code: 'https://github.com/Mikias-Miessa/Twitter-clone-django'
     },
     {
       id:6,
-      src: Hospital,
-      demo: 'https://hospital-ibs6.onrender.com',
-      code: 'https://github.com/DagimAsnake/hospital'
+      src: LMS,
+      title:'Library Management System',
+      demo: '#',
+      code: 'https://github.com/Mikias-Miessa/Library-Management-System'
     },
-    {
-      id:7,
-      src: IctPark,
-      demo: '',
-      code: 'https://github.com/DagimAsnake/ictFrontNew'
-    },
-    {
-      id:8,
-      src: MeetUp,
-      demo: 'https://remeetups.netlify.app/',
-      code: 'https://github.com/DagimAsnake/react-meetUp'
-    },
-    {
-      id:9,
-      src: Qoutes,
-      demo: 'https://reactqoutes.netlify.app/',
-      code: 'https://github.com/DagimAsnake/reactRouter-Quotes'
-    },
+   
   ]
  return (
     <div name='portfolio' className='bg-gradient-to-b from-black via-black to-indigo-950 w-full text-white pt-20'>
-        {/* md:h-screen */}
+      {/* md:h-screen */}
       <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
         <div className='pb-8'>
           <p className='text-4xl font-bold inline border-b-4 border-gray-500'>Portfolio</p>
@@ -99,24 +92,39 @@ const Portfolio = () => {
         </div>
 
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
-
-          {portfolios.map((port) => {
+          {portfolios.map((port, index) => {
             return (
-              <div key={port.id} className='shadow-md shadow-gray-600 rounded-lg'>
-                <img src={port.src} alt={port.src} className='rounded-md duration-200 hover:scale-105' />
+              <motion.div
+                key={port.id}
+                className='shadow-md shadow-gray-600 rounded-lg'
+                initial={{ y: 100, opacity: 0 }}
+                animate={controls}
+                transition={{
+                  type: 'spring',
+                  damping: 10,
+                  stiffness: 100,
+                  delay: index * 0.1,
+                }}
+                viewport={{ once: true, amount: 0.8 }}
+              >
+                <img src={port.src} alt={port.src} className='rounded-md duration-200 hover:scale-150' />
+                <div className='flex justify-center items-center pt-5 font-semibold px-10'>{ port.title}</div>
                 <div className='flex items-center justify-center'>
-                 <a href={port.demo} className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105' target='_blank' rel="noreferrer"> <button>Demo</button> </a>
-                 <a href={port.code} className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105' target='_blank' rel="noreferrer"> <button>Code</button> </a>
-                </div>
-            </div>
-            )
-          })}
 
+                  <a href={port.demo} className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105' target='_blank' rel='noreferrer'>
+                    <motion.button className="text-indigo-500" whileHover={{ textShadow: "8px,8px,20px,rgb(255,255,255)" }}>Demo</motion.button>
+                  </a>
+                  <a href={port.code} className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105' target='_blank' rel='noreferrer'>
+                    <motion.button className="text-indigo-500" whileHover={{textShadow:"8px,8px,8px,rgb(255,255,255)"}}>Code</motion.button>
+                  </a>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
-
     </div>
-  )
+  );
 }
 
 export default Portfolio

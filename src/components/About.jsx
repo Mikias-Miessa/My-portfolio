@@ -9,21 +9,26 @@ const About = () => {
         </div>
 
         <p className='text-lg font-light mt-20'>
-          Hello, my name is Mikias Miessa and I'm a passionate Full Stack Developer with expertise in both Frontend and Backend Technologies.
-          I have hands-on experience with HTML, CSS, JavaScript, TypeScript, ReactJS, VueJS, Ant Design, Material UI, NextJS, wordPress, NodeJS, Express, Django, and databases such as MongoDB and MySQL.
-          I also have experience with React Native for mobile app development.
-          I am a firm believer in Agile Methodology and have collaborated on projects utilizing these technologies, delivering top-notch solutions that have exceeded client expectations.
-          I am always eager to learn and grow, and am excited to be part of a team that is dedicated to creating innovative solutions that make a positive difference in people's lives.
+      
+
+          Hello, I'm Mikias Miessa, a dynamic mobile and web app developer based in Addis Ababa, Ethiopia.
+          With a strong academic background, I hold a degree in Electrical and Computer Engineering from Addis Ababa
+          Science and Technology University, where I graduated with distinction, boasting a GPA of 3.61.
+          This educational journey equipped me with a solid foundation for problem-solving and innovation.
+          Today, I channel my passion for technology and my expertise into crafting advanced digital solutions.
+          Whether it's building responsive web applications or creating feature-rich mobile apps,
+          I thrive on the challenge of turning ideas into reality. My commitment to delivering excellence,
+          combined with my technical skills, enables me to provide efficient and high-quality solutions for a diverse range of projects.
+          I am excited about the ever-evolving tech landscape and am ready to bring your ideas to life.
         </p>
 
         <br />
 
         <p className='text-lg font-light'>
-          I am a highly ambitious, self-motivated and driven software engineer with a passion for innovation and problem-solving.
-          I graduated from Addis Ababa Science and Technology University with a degree in Computer Engineering, where I maintained a 3.73 GPA.
-          I am always seeking new challenges and opportunities to learn and grow.
-          I am confident that I have the skills and experience necessary to be successful in any role I am given.
-          Let's build something great together!
+          I possess a relentless drive to stay at the forefront of the ever-evolving tech industry. My unwavering commitment to innovation
+          fuels my work and pushes me to explore new horizons. I am continuously seeking creative solutions to complex problems,
+          harnessing the power of technology to shape a better digital future. As a dedicated computer engineer, I am ready to tackle your
+          project with enthusiasm, ensuring that every aspect is meticulously designed, developed, and delivered to the highest standards
         </p>
       </div>
     </div>
