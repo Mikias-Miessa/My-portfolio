@@ -85,7 +85,7 @@ const Contact = () => {
         setLoading(false);
       })
       .catch(function (error) {
-        console.log(error);
+        
         setLoading(false);
       });
   };
@@ -142,8 +142,9 @@ const Contact = () => {
             <button
               type="submit"
               className="text-white bg-gradient-to-b from-teal-500 to-emerald-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300"
+              disabled={loading}
             >
-              Let's talk
+             {loading? 'Sending...': "Let's talk"} 
             </button>
             {formStatus && (
                 <div className="mt-4 p-4 bg-green-500 text-white rounded-md">
