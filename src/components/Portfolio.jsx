@@ -7,7 +7,9 @@ import SmartWaste from '../assets/portfolio/SmartWaste.png';
 import LMS from '../assets/portfolio/LMS.png';
 import Gobeze from '../assets/portfolio/gobeze.png';
 import TweeterClone from '../assets/portfolio/TweeterClone.png';
-
+import Siltena from '../assets/portfolio/Siltena.png';
+import GobezeConsult from '../assets/portfolio/GobezeConsult.png';
+import Invoice from '../assets/portfolio/InvoiceManagement.png';
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
@@ -39,16 +41,38 @@ const Portfolio = () => {
 
   const portfolios = [
     {
+      id: 8,
+      src: Siltena,
+      title: 'Siltena',
+      demo: 'https://siltena.com',
+      code: 'https://github.com/Mikias-Miessa/SiltenaTheme',
+    },
+    {
       id: 7,
       src: Gobeze,
       title: 'Gobeze Learning',
-      demo: 'https://gobezelearning.vercel.app/',
+      demo: 'https://gobeze.com',
       code: '#',
     },
     {
+      id: 9,
+      src: GobezeConsult,
+      title: 'Gobeze Consult',
+      demo: 'https://gobeze-consult.vercel.app/',
+      code: '#',
+    },
+    {
+      id: 10,
+      src: Invoice,
+      title: 'Invoice Management System',
+      demo: 'https://invoice-managment.vercel.app/',
+      code: 'https://github.com/Mikias-Miessa/Invoice-Managment',
+    },
+
+    {
       id: 3,
       src: SmartWaste,
-      title: 'Smart Waste Mangement System Using MQTT',
+      title: 'Smart Waste Management System Using MQTT',
       demo: '#',
       code: 'https://github.com/Mikias-Miessa/Smart-bin-front-and-back-end',
     },
@@ -57,7 +81,7 @@ const Portfolio = () => {
       src: TmhirtBete,
       title: 'Timhirt Bete App',
       demo: 'https://t.me/temhrtbete',
-      code: '#',
+      code: 'https://github.com/Mikias-Miessa/Student-Info-Flutter-app',
     },
     {
       id: 2,
@@ -122,7 +146,7 @@ const Portfolio = () => {
                 <img
                   src={port.src}
                   alt={port.src}
-                  className='rounded-md duration-200 hover:scale-150'
+                  className='rounded-md duration-200 hover:scale-105'
                 />
                 <div className='flex justify-center items-center pt-5 font-semibold px-10'>
                   {port.title}
