@@ -9,6 +9,8 @@ import Gobeze from '../assets/portfolio/gobeze.png';
 import TweeterClone from '../assets/portfolio/TweeterClone.png';
 import Siltena from '../assets/portfolio/Siltena.png';
 import GobezeConsult from '../assets/portfolio/GobezeConsult.png';
+import HappyHive from '../assets/portfolio/HappyHive.png';
+import BirrPulse from '../assets/portfolio/BirrPulse.png';
 import Invoice from '../assets/portfolio/InvoiceManagement.png';
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect, useState } from 'react';
@@ -40,6 +42,20 @@ const Portfolio = () => {
   }, [inView, controls]);
 
   const portfolios = [
+    {
+      id: 11,
+      src: HappyHive,
+      title: 'Happy Hive: Skill Insight',
+      demo: 'https://skill-insight-frontend.vercel.app',
+      code: '#',
+    },
+    {
+      id: 12,
+      src: BirrPulse,
+      title: 'Birr Pulse',
+      demo: 'https://Birrpulse.com',
+      code: '#',
+    },
     {
       id: 8,
       src: Siltena,
