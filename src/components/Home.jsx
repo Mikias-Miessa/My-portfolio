@@ -31,7 +31,7 @@ const Home = () => {
               damping: 10,
             }}
           >
-            I'm an enthusiastic full-stack developer in Kenya, Nairobi,
+            I'm an enthusiastic full-stack developer in Kenya,Nairobi, 
             with a strong background in web and mobile app development.
           </motion.p>
           <motion.div
