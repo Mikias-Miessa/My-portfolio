@@ -12,6 +12,7 @@ import GobezeConsult from '../assets/portfolio/GobezeConsult.png';
 import HappyHive from '../assets/portfolio/HappyHive.png';
 import BirrPulse from '../assets/portfolio/BirrPulse.png';
 import Invoice from '../assets/portfolio/InvoiceManagement.png';
+import QlearDocs from '../assets/portfolio/QlearDocs.png';
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
@@ -42,6 +43,13 @@ const Portfolio = () => {
   }, [inView, controls]);
 
   const portfolios = [
+    {
+      id: 13,
+      src: QlearDocs,
+      title: 'Qlear Docs',
+      demo: 'https://www.qlearhomedocs.com',
+      code: '#',
+    },
     {
       id: 11,
       src: HappyHive,
