@@ -1,5 +1,5 @@
 import React from 'react';
-import MyPic from '../assets/myProfile.png';
+import MyPic from '../assets/myProfilePic.png';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
